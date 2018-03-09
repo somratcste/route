@@ -1,4 +1,9 @@
 <?php
+
+require_once('../includes/globals.php');
 require_once('../routes/route.php');
 
-echo "this is index";
+function __autoload($class_name) {
+    require_once '../includes/config/'. $class_name . '.php';
+}
+
